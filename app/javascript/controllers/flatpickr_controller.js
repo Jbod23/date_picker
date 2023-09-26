@@ -7,6 +7,8 @@ export default class extends Controller {
     console.log("connected", this.element)
 
     flatpickr(".date_range", {
+      mode: "range",
+      showMonths: 2,
       dateFormat: "F j, Y",
     })
   }
