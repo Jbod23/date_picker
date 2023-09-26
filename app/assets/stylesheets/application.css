@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .date_range {
+    width: 19%; /* or any specific width you want */
+  }
