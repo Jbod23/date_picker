@@ -22,6 +22,9 @@ class EventsController < ApplicationController
   # POST /events or /events.json
   def create
     @event = Event.new(event_params)
+    start_date, end_date = params[:event][:date_range].split(" to ")
+    @event.start_date = start_date
+    @event.end_date = end_date
 
     respond_to do |format|
       if @event.save
@@ -36,6 +39,10 @@ class EventsController < ApplicationController
 
   # PATCH/PUT /events/1 or /events/1.json
   def update
+    start_date, end_date = params[:event][:date_range].split(" to ")
+    @event.start_date = start_date
+    @event.end_date = end_date
+
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to event_url(@event), notice: "Event was successfully updated." }
@@ -65,6 +72,6 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params
-      params.require(:event).permit(:title, :date_range)
+      params.require(:event).permit(:title)
     end
 end
