@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "events#index"
+  root "events#new"
   resources :events
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

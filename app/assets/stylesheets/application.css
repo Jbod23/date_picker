@@ -1,19 +1,134 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.form-container {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #0000001a;
+  padding: 20px;
+  margin: 10px;
+  width: 410px;
+}
 
- .date_range {
-    width: 19%; /* or any specific width you want */
-  }
+.form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.label-container {
+  width: 100px; /* Adjust the width as needed */
+}
+
+.title-input {
+  width: 280px; /* Or any width you prefer for the title input */
+}
+
+.date-range-input {
+  width: 280px; /* Or any width you prefer for the date range input */
+}
+
+.input-field {
+  width: 280px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.error-messages {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.notice {
+  background-color: #e8f5e9; /* Light green background */
+  color: #4CAF50; /* Green text */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.event-card {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #0000001a;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #e8e3e3; /* White background */
+}
+
+.event-link {
+  margin-top: 10px; /* Additional spacing above the link */
+}
+
+.link {
+  color: #4CAF50; /* Green text */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.rounded-button {
+  margin-bottom: 20px; /* Additional spacing above the button */
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #4CAF50; /* Adjust background color as needed */
+  color: #ffffff; /* Adjust text color as needed */
+  text-decoration: none;
+  border-radius: 15px; /* Adjust for desired roundness */
+  transition: background-color 0.3s ease; /* Optional: for a smooth hover effect */
+}
+
+.rounded-button:hover {
+  background-color: #45a049; /* Adjust hover background color as needed */
+}
+
+.event-wrapper {
+  width: fit-content; /* or any specific width */
+  margin-left: 40px; /* center the wrapper */
+}
+
+.event-details-container {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #0000001a;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  margin-bottom: 20px; /* Space between the event details and the actions */
+  margin-top: 40px;
+}
+
+.event-actions {
+  text-align: center;
+  margin-top: 20px; /* Additional spacing above the actions */
+}
+
+.action-link {
+  margin-right: 10px; /* Space between the action links */
+  margin-left: 10px; /* Space between the action links */
+}
+
+.destroy-button {
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Additional spacing above the Destroy button */
+}
+
+.destroy-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}

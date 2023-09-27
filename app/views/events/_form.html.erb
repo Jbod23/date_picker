@@ -1,10 +1,7 @@
-<%= form_with(model: event, data: {
-  controller: "flatpickr"
-}) do |form| %>
+<%= form_with(model: event, data: { controller: "flatpickr" }) do |form| %>
   <% if event.errors.any? %>
-    <div style="color: red">
+    <div class="error-messages">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
       <ul>
         <% event.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -13,17 +10,27 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+  <div class="form-container">
+    <div class="form-field">
+      <div class="label-container">
+        <%= form.label :title %>
+      </div>
+      <div class="input-container">
+        <%= form.text_field :title, class: "input-field title-input" %>
+      </div>
+    </div>
 
-  <div>
-    <%= form.label :date_range, style: "display: block" %>
-    <%= form.datetime_field :date_range, class: "date_range" %>
-  </div>
+    <div class="form-field">
+      <div class="label-container">
+        <%= form.label :date_range %>
+      </div>
+      <div class="input-container">
+        <%= form.datetime_field :date_range, class: "date_range input-field date-range-input" %>
+      </div>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div class="form-field">
+      <%= form.submit class: "submit-button" %>
+    </div>
   </div>
 <% end %>

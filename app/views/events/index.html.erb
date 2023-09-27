@@ -1,14 +1,25 @@
-<p style="color: green"><%= notice %></p>
+<%# Display notice in a styled container %>
+<% if notice %>
+  <div class="notice">
+    <p><%= notice %></p>
+  </div>
+<% end %>
 
 <h1>Events</h1>
 
+
+<%= link_to "New event", new_event_path, class: "rounded-button" %>
+
+
+
 <div id="events">
   <% @events.each do |event| %>
-    <%= render event %>
-    <p>
-      <%= link_to "Show this event", event %>
-    </p>
+    <div class="event-card">
+      <%= render event %>
+      <p class="event-link">
+        <%= link_to "Show this event", event, class: "link" %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New event", new_event_path %>

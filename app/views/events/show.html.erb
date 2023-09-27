@@ -1,10 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+  <div class="notice">
+    <p><%= notice %></p>
+  </div>
+<% end %>
 
-<%= render @event %>
+<div class="event-wrapper">
+  <div class="event-details-container">
+    <%= render @event %>
+  </div>
 
-<div>
-  <%= link_to "Edit this event", edit_event_path(@event) %> |
-  <%= link_to "Back to events", events_path %>
+  <div class="event-actions">
+    <%= link_to "Edit this event", edit_event_path(@event), class: "link action-link" %> |
+    <%= link_to "Back to events", events_path, class: "link action-link" %>
 
-  <%= button_to "Destroy this event", @event, method: :delete %>
+    <%= button_to "Destroy this event", @event, method: :delete, class: "destroy-button" %>
+  </div>
 </div>
